@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- google font cdn -->
+
+
+    <!-- link css file -->
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="font-nazimFont ">
+
+    <section id="mainSection" class=" py-2 bg-[#132e54]">
+        <div class="container flex items-center justify-center ">
+            <div
+                class="wraper min-w-full md:min-w-min box_shadow bg-[#173969] text-white px-4  rounded-sm py-5 box-border ">
+                <!-- display header with random btn -->
+                <div class="displayHeader border-b-2 border-gray-300
+                pb-2 flex items-center justify-between ">
+                    <h2 class="font-semibold text-xl font-nazimFont">Display Color</h2>
+                    <button id="randomBtn"
+                        class="bg-teal-400 font-nazimFont inline-block px-3 py-1 rounded-sm text-white select-none">Random
+                        color</button>
+                </div>
+
+                <!-- change only background color with display -->
+                <div id="displayColor"
+                    class="ring-1 min-w-full h-24 transition-all delay-100  rounded-sm bg-[#1D4275] mt-5 mb-5">
+                </div>
+
+                <!-- save and copy color code -->
+                <div class="saveColorBox flex_custom border-gray-300 border-b-2  pb-3">
+                    <h1 class="font-nazimFont ">Save & Copy color</h1>
+                    <div class="flex_custom gap-3">
+                        <button id="copyBtn"
+                            class=" px-4  py-2 rounded-sm transition select-none hover:text-orange-400">Copy</button>
+                        <button id="saveBtn" class="hover:text-teal-400 transition px-4  py-2">Save</button>
+                    </div>
+                </div>
+
+
+
+                <!-- color input with double -->
+                <div class="flex_custom py-4 border-b-[1px] border-teal-500">
+                    <h1 class="">Select Copy Mode</h1>
+                    <div class="flex_custom gap-3">
+                        <div>
+                            <input checked type="radio" id="select_hex" name="radio_mode" value="hex">
+                            <label for="select_hex" class="select-none">HEX</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="radio_mode" value="rgb" id="select_rgb">
+                            <label for="select_rgb" class="select-none">RGB</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- input box genarate color rgb and hex color code -->
+                <div class="mainInputBox md:flex md:gap-5 mt-4">
+                    <div class="leftInput relative">
+                        <div
+                            class="forHashTag absolute top-8 text-xl rounded-sm left-0 bg-gray-400 text-white px-3 py-[2px]">
+                            #
+                        </div>
+                        <label for="hexColorInp" class="block">HEX color</label>
+                        <input type="text" value="1D4275" id="hexColorInp" placeholder="1D4275"
+                            class="outline-none ring-1 bg-[#173969] text-gray-300 uppercase min-w-full rounded-sm px-10 mt-2 block py-1">
+                    </div>
+
+                    <div class="rightInput mt-3 md:mt-0">
+                        <label for="rgbcolorInp" class="block">RGB color</label>
+                        <input type="text" value="" id="rgbColorInp" disabled placeholder="rgb(255, 255, 255)"
+                            class="outline-none text-gray-300 ring-1 min-w-full rounded-sm px-5 mt-2 block py-1">
+                    </div>
+
+
+                </div>
+                <!-- Adjust RGB color with three range input  -->
+                <div class="py-4">
+                    <h1 class=" block text-lg border-b-[1px] py-2 border-teal-400">Adjust RGB Colors</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-3 mt-3">
+                        <div class="singleRange">
+                            <div class="flex_custom">
+                                <label for="redColor" class="text-red-500">Red</label>
+                                <small id="red-label"></small>
+                            </div>
+                            <input type="range" class="min-w-full inline-block" value="" id="redColorRange">
+                        </div>
+
+                        <div class="singleRange">
+                            <div class="flex_custom">
+                                <label for="greenColor" class="text-teal-500">Green</label>
+                                <small id="green-label"></small>
+                            </div>
+                            <input type="range" class="min-w-full inline-block" class="" value="" id="greenColorRange">
+                        </div>
+
+                        <div class="singleRange">
+                            <div class="flex_custom">
+                                <label for="blueColor" class="text-blue-500">Blue</label>
+                                <small id="blue-label"></small>
+                            </div>
+                            <input type="range" class="min-w-full inline-block" value="" id="blueColorRange">
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Generate color preset with copy -->
+                <div class="mt-5">
+                    <h1 class=" text-lg  block border-b-[1px] pb-2 border-teal-300">Background color
+                        preset </h1>
+                    <div id="preset" class="grid grid-cols-3 md:grid-cols-4 gap-3 grid-w mt-5">
+                    </div>
+                </div>
+
+                <!-- save preset color code  -->
+                <div class="presetShow mt-5 ">
+                    <h1 class=" text-lg block border-b-[1px] pb-2 border-teal-300">Save preset :</h1>
+                    <div id="savePreset" class=" grid grid-cols-3 md:grid-cols-4 gap-3 grid-w mt-5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- javaScript file link up here -->
+    <script src="custom_js/index.js"></script>
+</body>
+
+</html>

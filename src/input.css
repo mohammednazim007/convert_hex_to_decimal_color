@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Nunito:ital,wght@0,300;0,400;1,300&family=Oswald:wght@200;400&family=Water+Brush&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+The base component will be exicute undera the line
+===========================================================
+*/
+
+/* 
+
+========================================================
+*/
+
+/* 
+custom css for importent
+=============================================== 
+*/
+.flex_custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.colorPreset {
+  padding: 17px 10px;
+  display: inline-block;
+  background-color: tomato;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+.box_shadow{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
